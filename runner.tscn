@@ -7,9 +7,11 @@
 radius = 22.0
 
 [node name="Runner" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_f7b3c")
 
 [node name="Skin" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 texture = ExtResource("1_m3p76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
