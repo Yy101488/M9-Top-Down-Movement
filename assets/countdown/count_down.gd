@@ -1,14 +1,4 @@
-## A counter that displays words one at a time.
-##
-## The Countdown node is a label that displays, in order, any amount of 
-## strings set in the [member counting_steps] property, and plays an animation for each. [br]
-## Each string is shown for [member step_duration] seconds; once all the strings
-## have appeared, the [signal counting_finished] signal is emitted.[br]
-## Once the countdown finishes, the node hides on its own until [member start_counting]
-## is called again.[br]
-## [br]
-## [b]Note[/b]: Any text written in the editor will be removed when [member start_counting]
-## runs.
+
 @tool
 @icon("count_down.svg")
 class_name CountDown
