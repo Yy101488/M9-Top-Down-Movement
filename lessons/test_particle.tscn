@@ -6,21 +6,21 @@
 blend_mode = 1
 
 [sub_resource type="Curve" id="Curve_lcykd"]
-_data = [Vector2(0, 0.63205206), 0.0, 2.9011917, 0, 0, Vector2(0.3560865, 1), -1.24744e-06, -1.24744e-06, 0, 0, Vector2(0.77019346, 0.53509283), -2.0703008, -2.0703008, 0, 0, Vector2(1, 0.0005737543), -3.3354924, 0.0, 0, 0]
+_data = [Vector2(0, 0.632052), 0.0, 2.90119, 0, 0, Vector2(0.356086, 1), -1.24744e-06, -1.24744e-06, 0, 0, Vector2(0.770193, 0.535093), -2.0703, -2.0703, 0, 0, Vector2(1, 0.000573754), -3.33549, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_eyha8"]
 curve = SubResource("Curve_lcykd")
 
 [sub_resource type="Gradient" id="Gradient_4iu6k"]
-offsets = PackedFloat32Array(0, 0.68623024)
-colors = PackedColorArray(0.6738281, 0.43800473, 0.031585693, 1, 0.43164063, 0.049739838, 0.049739838, 1)
+offsets = PackedFloat32Array(0, 0.68623)
+colors = PackedColorArray(0.673828, 0.438005, 0.0315857, 1, 0.431641, 0.0497398, 0.0497398, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6tnhc"]
 gradient = SubResource("Gradient_4iu6k")
 
 [sub_resource type="Curve" id="Curve_ge3xn"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2276923, 1), 0.0, 0.0, 0, 0, Vector2(0.8584615, 0.015304685), 0.0, 0.0, 0, 0, Vector2(0.9984615, 0.0018157959), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.227692, 1), 0.0, 0.0, 0, 0, Vector2(0.858461, 0.0153047), 0.0, 0.0, 0, 0, Vector2(0.998461, 0.0018158), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_ujlk2"]
@@ -30,15 +30,15 @@ curve = SubResource("Curve_ge3xn")
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.0
-angle_min = -179.99998
-angle_max = 180.00002
+angle_min = -180.0
+angle_max = 180.0
 direction = Vector3(0, -1, 0)
 spread = 0.0
 initial_velocity_min = 50.0
 initial_velocity_max = 70.0
 gravity = Vector3(0, 0, 0)
-scale_min = 0.19999999
-scale_max = 0.19999999
+scale_min = 0.2
+scale_max = 0.2
 scale_curve = SubResource("CurveTexture_ujlk2")
 color_ramp = SubResource("GradientTexture1D_6tnhc")
 alpha_curve = SubResource("CurveTexture_eyha8")
@@ -48,6 +48,6 @@ alpha_curve = SubResource("CurveTexture_eyha8")
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_bn04v")
 amount = 30
+process_material = SubResource("ParticleProcessMaterial_5s55o")
 texture = ExtResource("1_bmsb4")
 lifetime = 3.0
-process_material = SubResource("ParticleProcessMaterial_5s55o")

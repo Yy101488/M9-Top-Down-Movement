@@ -1,8 +1,9 @@
 @tool
 extends Control
 
-@onready var _blur_color_rect: ColorRect = $BlurColorRect
-@onready var _ui_panel_container: PanelContainer = $UIPanelContainer
+
+@onready var _blur_color_rect: ColorRect = %BlurColorRect
+@onready var _ui_panel_container: PanelContainer = %UIPanelContainer
 
 
 @export_range(0, 1.0) var menu_opened_amount := 0.0:
