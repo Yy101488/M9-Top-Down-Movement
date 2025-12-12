@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ctfrkukdhiywq" path="res://lessons/circuit.tscn" id="4_sepuf"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_viysf"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="8_tpjcj"]
-[ext_resource type="PackedScene" uid="uid://dj6ye05dbiqpi" path="res://lessons/pause_screen.tscn" id="9_tpjcj"]
+[ext_resource type="PackedScene" uid="uid://b0ugvtmbxbobg" path="res://lessons/pause_screen.tscn" id="9_tpjcj"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -16,15 +16,18 @@ script = ExtResource("1_48faf")
 
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 unique_name_in_owner = true
+process_mode = 3
 y_sort_enabled = true
 position = Vector2(-329, -725)
 
 [node name="FinishLine" parent="." instance=ExtResource("3_sepuf")]
 unique_name_in_owner = true
+process_mode = 3
 position = Vector2(-1338, -187)
 area_width = 256
 
 [node name="CircuitBackground" type="Sprite2D" parent="."]
+process_mode = 3
 z_index = -1
 position = Vector2(6, -1)
 texture = ExtResource("1_gkp25")
@@ -42,12 +45,14 @@ position = Vector2(-76, -874)
 position = Vector2(1353, 4)
 
 [node name="Circuit" parent="." instance=ExtResource("4_sepuf")]
+process_mode = 3
 position = Vector2(5, 29)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CountDown" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
+process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -68,3 +73,4 @@ metadata/_custom_type_script = "uid://57e8080cpukf"
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("9_tpjcj")]
 visible = false
+animation_duration = 2.3
