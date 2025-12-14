@@ -44,6 +44,9 @@ viewport_path = NodePath("Subviewport")
 motion_mode = 1
 script = ExtResource("1_f7b3c")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -23)
+
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.156863)
 self_modulate = Color(0, 0, 0, 1)
@@ -62,9 +65,6 @@ texture = ExtResource("3_x5rx3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -24)
 shape = SubResource("CircleShape2D_f7b3c")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, -23)
 
 [node name="Subviewport" type="SubViewport" parent="."]
 transparent_bg = true

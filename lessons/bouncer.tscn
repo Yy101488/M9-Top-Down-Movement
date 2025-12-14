@@ -43,7 +43,7 @@ viewport_path = NodePath("Subviewport")
 [sub_resource type="CircleShape2D" id="CircleShape2D_oaqgf"]
 radius = 32.573
 
-[node name="Bouncer" type="CharacterBody2D"]
+[node name="bouncer" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_1qive")
 
@@ -88,5 +88,19 @@ texture = SubResource("ViewportTexture_d46nv")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(1, -23)
+position = Vector2(1, -25)
 shape = SubResource("CircleShape2D_oaqgf")
+
+[node name="Raycasts" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycasts"]
+position = Vector2(1, -25)
+rotation = 1.12795
+target_position = Vector2(100, -45)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Raycasts"]
+position = Vector2(1, -23)
+rotation = 2.25591
+scale = Vector2(1, 1)
+target_position = Vector2(98.7055, 14.9069)
