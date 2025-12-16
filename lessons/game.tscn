@@ -31,6 +31,7 @@ y_sort_enabled = true
 position = Vector2(-516, -764)
 
 [node name="Bouncer" parent="." instance=ExtResource("5_0mx76")]
+unique_name_in_owner = true
 position = Vector2(-1116, -400)
 
 [node name="SimpleObstacle" parent="." instance=ExtResource("2_4o7yg")]

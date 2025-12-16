@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 
 @export var max_speed:=600.0
-@export var acceleration:=1200.0
+@export var acceleration:=2000.0
 @export var deceleration := 1080.0
 
 signal walked_to

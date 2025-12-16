@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 
 @export var max_speed:=600.0
-@export var acceleration:=1200.0
+@export var acceleration:=1000.0
 @export var avoidance_strength :=21000.0
 
 func _physics_process(delta: float) -> void:
@@ -39,7 +39,11 @@ func _physics_process(delta: float) -> void:
 		_dust.emitting = false
 
 func get_global_player_position() -> Vector2:
-	return get_tree().root.get_node("Game/Runner").global_position
+	var runner_node=get_tree().root.get_node("Game/Runner")
+	if runner_node:
+		return runner_node.global_position
+	else:
+		return global_position
 	
 func _ready() -> void:
 	_hit_box.body_entered.connect(func(body:Node)->void:
@@ -48,6 +52,12 @@ func _ready() -> void:
 			)
 func calculate_avoidance_force() -> Vector2:
 	var avoidance_force := Vector2.ZERO
+	
+	for raycast: RayCast2D in _raycasts.get_children():
+		if raycast.is_colliding():
+			pass
+	return avoidance_force
+
 
 	for raycast: RayCast2D in _raycasts.get_children():
 		if raycast.is_colliding():
